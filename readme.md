@@ -42,12 +42,7 @@ The script performs the following analysis steps:
 1. **Data Preprocessing**
    - Reads experimental data (CSV format).
    - Computes the mean and standard error across repeated trials.
-   - Converts magnetic field strength \(B\) (mT) to total particle energy \(E\) (MeV) using:
-     \[
-     p[\text{MeV}/c] = 300\,B[\text{T}]\,R[\text{m}],
-     \qquad E = \sqrt{p^2 + m_e^2},
-     \]
-     where \(R = 0.05~\text{m}\) is the spectrometer radius and \(m_e = 0.511~\text{MeV}\) is the electron mass.
+   - Converts magnetic field strength \(B\) (mT) to total particle energy \(E\) (MeV) using natural units
 
 2. **Background Subtraction**
    - A constant background rate of **0.32 counts/s** is subtracted from all mean count rates.
