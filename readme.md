@@ -42,12 +42,7 @@ The script performs the following analysis steps:
 1. **Data Preprocessing**
    - Reads experimental data (CSV format).
    - Computes the mean and standard error across repeated trials.
-   - Converts magnetic field strength \(B\) (mT) to total particle energy \(E\) (MeV) using:
-     \[
-     p[\text{MeV}/c] = 300\,B[\text{T}]\,R[\text{m}],
-     \qquad E = \sqrt{p^2 + m_e^2},
-     \]
-     where \(R = 0.05~\text{m}\) is the spectrometer radius and \(m_e = 0.511~\text{MeV}\) is the electron mass.
+   - Converts magnetic field strength \(B\) (mT) to total particle energy \(E\) (MeV) using natural units
 
 2. **Background Subtraction**
    - A constant background rate of **0.32 counts/s** is subtracted from all mean count rates.
@@ -67,9 +62,9 @@ The script performs the following analysis steps:
 
 ## Interpretation Notes
 
-- **Na-22**: The fitted endpoint energy (\(Q \approx 1.38~\text{MeV}\)) is higher than the dominant decay branch (0.546 MeV) but close to the rare 1.820 MeV transition. This discrepancy arises because the model assumes a single decay branch, while the actual Na-22 spectrum is a superposition of two positron-emission branches.
+- **Na-22**: The fitted endpoint energy (Q = 1.38 MeV) is higher than the dominant decay branch (0.546 MeV) but close to the rare 1.820 MeV transition. This discrepancy arises because the model assumes a single decay branch, while the actual Na-22 spectrum is a superposition of two positron-emission branches.
 
-- **Sr-90**: The fitted endpoint energy (\(Q \approx 2.91~\text{MeV}\)) agrees reasonably with the dominant 2.274 MeV decay of Y-90. In this case, the higher-energy Y-90 decay dominates the overall spectrum since Sr-90 and Y-90 are in secular equilibrium.
+- **Sr-90**: The fitted endpoint energy (Q = 2.91 MeV) agrees reasonably with the dominant 2.274 MeV decay of Y-90. In this case, the higher-energy Y-90 decay dominates the overall spectrum since Sr-90 and Y-90 are in secular equilibrium.
 
 ---
 
